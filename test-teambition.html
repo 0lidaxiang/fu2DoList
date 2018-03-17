@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ssss</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+    $.ajax( {
+        url:'https://account.teambition.com/oauth2/access_token',
+        data:{
+                 client_id : "dd088110-2998-11e8-b897-61300a6cd010",
+                 client_secret : "4c3f76c6-706e-49a8-97cc-6f01d227f843",
+                 code : "kqXlvChOwPcWkF-m4HV0Xp8C"
+        },
+        type:'POST',
+        // cache:false,
+        dataType:'json',
+        success:function(data) {
+          console.log(data);
+            if(data.msg =="true" ){
+                // view("修改成功！");
+                alert("修改成功！");
+                window.location.reload();
+            }else{
+                view(data.msg);
+            }
+         },
+         error : function() {
+              // view("异常！");
+              console.log(data);
+              console.log("异常！");
+              // alert("异常！");
+         }
+    });
+
+    </script>
+
+  </head>
+  <body>
+
+  </body>
+</html>
