@@ -6,7 +6,7 @@ from home.view.index import  *
 from django.views.generic import TemplateView
 
 urlpatterns = [
-    # url('^index/$', index),
+    
     url('^aboutUs/$', aboutUs),
     url('^index/$', TemplateView.as_view(template_name="home/index.html")),
 
