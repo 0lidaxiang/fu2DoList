@@ -42,3 +42,19 @@ create table mycalendar (id  SERIAL PRIMARY KEY, projectId int, task varchar(500
 select * from mycalendar;
 insert into mycalendar VALUES(2, 1, '工作内容', '2018-05-16 15:36:38');
 ```
+
+```
+sudo su postgres
+psql fu2DoList
+```
+
+## create super admin
+```
+python3 manage.py createsuperuser
+```
+
+http://127.0.0.1:8000/admin/login/?next=/admin/
+
+
+## bug
+use JsonResponse not HttpReponse
